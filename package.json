@@ -1,0 +1,8 @@
+{
+  "name": "mmpi-ii-rf",
+  "version": "1.0.0",
+  "description": "MMPI-II-RF web application",
+  "scripts": {
+    "test": "node test.js"
+  }
+}
