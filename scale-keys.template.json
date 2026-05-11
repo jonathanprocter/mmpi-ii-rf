@@ -1,0 +1,75 @@
+{
+  "_instructions": "Populate this file from your MMPI-2-RF Technical Manual (Ben-Porath & Tellegen, 2008/2011), Appendix A. Then rename to scale-keys.json. Format: id = MMPI-2-RF item number (1-338), key = true means endorsing True scores a point, false means endorsing False scores a point.",
+
+  "VRIN-r": {
+    "itemPairs": [
+      {"pair": [0, 0], "scoreIf": "different"},
+      "_comment: Add all ~53 pairs from manual Table X. scoreIf = 'different' for similar-content pairs, 'same' for opposite-content pairs"
+    ]
+  },
+
+  "TRIN-r": {
+    "itemPairs": [
+      {"pair": [0, 0], "scoreIf": "both_true"},
+      "_comment: Add all ~26 pairs from manual. scoreIf = 'both_true' or 'both_false'"
+    ]
+  },
+
+  "F-r":   { "items": [{"id": 0, "key": true}] },
+  "Fp-r":  { "items": [{"id": 0, "key": true}] },
+  "Fs":    { "items": [{"id": 0, "key": true}] },
+  "FBS-r": { "items": [{"id": 0, "key": true}] },
+  "RBS":   { "items": [{"id": 0, "key": true}] },
+  "L-r":   { "items": [{"id": 0, "key": false}] },
+  "K-r":   { "items": [{"id": 0, "key": false}] },
+
+  "EID":   { "items": [] },
+  "THD":   { "items": [] },
+  "BXD":   { "items": [] },
+
+  "RCd":   { "items": [] },
+  "RC1":   { "items": [] },
+  "RC2":   { "items": [] },
+  "RC3":   { "items": [] },
+  "RC4":   { "items": [] },
+  "RC6":   { "items": [] },
+  "RC7":   { "items": [] },
+  "RC8":   { "items": [] },
+  "RC9":   { "items": [] },
+
+  "MLS":   { "items": [] },
+  "GIC":   { "items": [] },
+  "HPC":   { "items": [] },
+  "NUC":   { "items": [] },
+  "COG":   { "items": [] },
+
+  "SUI":   { "items": [] },
+  "HLP":   { "items": [] },
+  "SFD":   { "items": [] },
+  "NFC":   { "items": [] },
+  "STW":   { "items": [] },
+  "AXY":   { "items": [] },
+  "ANP":   { "items": [] },
+  "BRF":   { "items": [] },
+  "MSF":   { "items": [] },
+
+  "JCP":   { "items": [] },
+  "SUB":   { "items": [] },
+  "AGG":   { "items": [] },
+  "ACT":   { "items": [] },
+
+  "FML":   { "items": [] },
+  "IPP":   { "items": [] },
+  "SAV":   { "items": [] },
+  "SHY":   { "items": [] },
+  "DSF":   { "items": [] },
+
+  "AES":   { "items": [] },
+  "MEC":   { "items": [] },
+
+  "AGGR-r": { "items": [] },
+  "PSYC-r": { "items": [] },
+  "DISC-r": { "items": [] },
+  "NEGE-r": { "items": [] },
+  "INTR-r": { "items": [] }
+}

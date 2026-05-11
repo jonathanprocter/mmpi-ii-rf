@@ -12,6 +12,9 @@
  */
 
 const mmpiQuestions = [{
+    "id": 1,
+    "text": "I like mechanics magazines."
+}, {
     "id": 2,
     "text": "I have a good appetite."
 }, {
@@ -690,11 +693,11 @@ const mmpiQuestions = [{
     "id": 227,
     "text": "I have had no difficulty in keeping my balance in walking."
 }, {
-    "id": 227,
-    "text": "228.I feel anxiety about something or someone almost all the time."
-}, {
     "id": 228,
-    "text": "229.I am apt to pass up something I want to do when others feel that it isn't worth doing."
+    "text": "I feel anxiety about something or someone almost all the time."
+}, {
+    "id": 229,
+    "text": "I am apt to pass up something I want to do when others feel that it isn't worth doing."
 }, {
     "id": 230,
     "text": "I have a great deal of stomach trouble."
@@ -782,9 +785,6 @@ const mmpiQuestions = [{
 }, {
     "id": 258,
     "text": "I dread the thought of an earthquake."
-}, {
-    "id": 258,
-    "text": "Scoring guide: True=1;  False=2;  No answer=3"
 }, {
     "id": 259,
     "text": "I like repairing a door latch."
@@ -1032,282 +1032,16 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         mmpiQuestions
     };
-}/**
- * MMPI-II-RF Scoring Logic
- * 
- * This file implements the scoring logic for the MMPI-II-RF assessment based on
- * the documentation extracted from the "Comprehensive Logic and Formulas for Spreadsheet Scales.zip"
- */
+}
+
+// mmpiScales is loaded from mmpiScales.js (external file)
+// normativeTables is loaded from normativeTables.js (external file)
+// Both must be included via <script> tags before this file.
 
 /**
- * Scale definitions with metadata
- * Based on the item-to-scale mapping documentation
+ * MMPI-II-RF Scoring Logic
  */
-const mmpiScales = {
-    // Validity Scales
-    "VRIN-r": {
-        name: "Variable Response Inconsistency - Revised",
-        description: "Measures inconsistent responses to similar item pairs",
-        type: "validity",
-        scoringType: "pair_comparison",
-        itemPairs: [{
-                pair: [3, 39],
-                type: "similar",
-                scoreIf: "different"
-            }, {
-                pair: [6, 111],
-                type: "similar",
-                scoreIf: "different"
-            }, {
-                pair: [6, 196],
-                type: "similar",
-                scoreIf: "different"
-            }, {
-                pair: [9, 56],
-                type: "similar",
-                scoreIf: "different"
-            }, {
-                pair: [10, 196],
-                type: "similar",
-                scoreIf: "different"
-            }, {
-                pair: [12, 166],
-                type: "similar",
-                scoreIf: "different"
-            }, {
-                pair: [23, 163],
-                type: "similar",
-                scoreIf: "different"
-            }, {
-                pair: [27, 87],
-                type: "similar",
-                scoreIf: "different"
-            }, {
-                pair: [31, 54],
-                type: "similar",
-                scoreIf: "different"
-            }, {
-                pair: [32, 316],
-                type: "similar",
-                scoreIf: "different"
-            }, {
-                pair: [73, 277],
-                type: "similar",
-                scoreIf: "different"
-            }, {
-                pair: [81, 142],
-                type: "similar",
-                scoreIf: "different"
-            }, {
-                pair: [83, 288],
-                type: "similar",
-                scoreIf: "different"
-            }, {
-                pair: [84, 105],
-                type: "similar",
-                scoreIf: "different"
-            }, {
-                pair: [99, 314],
-                type: "similar",
-                scoreIf: "different"
-            }
-            // Note: This is a subset of the pairs for demonstration
-            // The complete list would include all 53 item pairs
-        ]
-    },
-    "TRIN-r": {
-        name: "True Response Inconsistency - Revised",
-        description: "Measures tendency to respond true or false inconsistently",
-        type: "validity",
-        scoringType: "pair_comparison",
-        itemPairs: [{
-                pair: [1, 143],
-                type: "opposite",
-                scoreIf: "both_true"
-            }, {
-                pair: [23, 107],
-                type: "opposite",
-                scoreIf: "both_true"
-            }, {
-                pair: [31, 67],
-                type: "opposite",
-                scoreIf: "both_true"
-            }, {
-                pair: [49, 167],
-                type: "opposite",
-                scoreIf: "both_true"
-            }, {
-                pair: [83, 101],
-                type: "opposite",
-                scoreIf: "both_true"
-            }, {
-                pair: [95, 158],
-                type: "opposite",
-                scoreIf: "both_true"
-            }, {
-                pair: [99, 218],
-                type: "opposite",
-                scoreIf: "both_true"
-            }, {
-                pair: [137, 285],
-                type: "opposite",
-                scoreIf: "both_true"
-            }, {
-                pair: [159, 280],
-                type: "opposite",
-                scoreIf: "both_true"
-            }, {
-                pair: [169, 177],
-                type: "opposite",
-                scoreIf: "both_false"
-            }
-            // Note: This is a subset of the pairs for demonstration
-        ]
-    },
-    "F-r": {
-        name: "Infrequent Responses - Revised",
-        description: "Identifies unusual or infrequent responses",
-        type: "validity",
-        items: [{
-                id: 14,
-                key: true
-            }, {
-                id: 17,
-                key: false
-            }, {
-                id: 20,
-                key: true
-            }, {
-                id: 21,
-                key: true
-            }, {
-                id: 25,
-                key: true
-            }, {
-                id: 32,
-                key: true
-            }, {
-                id: 34,
-                key: true
-            }, {
-                id: 35,
-                key: true
-            }, {
-                id: 44,
-                key: true
-            }, {
-                id: 48,
-                key: true
-            }
-            // Note: This is a subset of the items for demonstration
-        ]
-    },
-
-    // Higher-Order (H-O) Scales
-    "EID": {
-        name: "Emotional/Internalizing Dysfunction",
-        description: "Overall emotional and internalizing problems",
-        type: "higher-order",
-        items: [
-            // Items would be listed here based on the documentation
-        ]
-    },
-    "THD": {
-        name: "Thought Dysfunction",
-        description: "Problems associated with disordered thinking",
-        type: "higher-order",
-        items: [
-            // Items would be listed here based on the documentation
-        ]
-    },
-    "BXD": {
-        name: "Behavioral/Externalizing Dysfunction",
-        description: "Acting-out or externalizing behaviors",
-        type: "higher-order",
-        items: [
-            // Items would be listed here based on the documentation
-        ]
-    },
-
-    // Restructured Clinical (RC) Scales
-    "RCd": {
-        name: "Demoralization",
-        description: "General unhappiness and dissatisfaction",
-        type: "clinical",
-        items: [{
-                id: 15,
-                key: true
-            }, {
-                id: 29,
-                key: true
-            }, {
-                id: 37,
-                key: true
-            }, {
-                id: 49,
-                key: true
-            }, {
-                id: 71,
-                key: true
-            }, {
-                id: 89,
-                key: true
-            }, {
-                id: 98,
-                key: true
-            }, {
-                id: 99,
-                key: true
-            }, {
-                id: 109,
-                key: true
-            }, {
-                id: 134,
-                key: true
-            }
-            // Note: This is a subset of the items for demonstration
-        ]
-    },
-    "RC1": {
-        name: "Somatic Complaints",
-        description: "Diffuse physical health complaints",
-        type: "clinical",
-        items: [{
-                id: 1,
-                key: true
-            }, {
-                id: 3,
-                key: true
-            }, {
-                id: 11,
-                key: true
-            }, {
-                id: 28,
-                key: true
-            }, {
-                id: 36,
-                key: true
-            }, {
-                id: 40,
-                key: true
-            }, {
-                id: 55,
-                key: true
-            }, {
-                id: 65,
-                key: true
-            }, {
-                id: 75,
-                key: true
-            }, {
-                id: 118,
-                key: true
-            }
-            // Note: This is a subset of the items for demonstration
-        ]
-    }
-    // Additional scales would be defined here
-};
+// Scale definitions loaded from mmpiScales.js (external file)
 
 /**
  * Calculates raw scores for all MMPI-II-RF scales based on responses
@@ -1324,7 +1058,7 @@ function calculateRawScores(responses) {
         // Different scoring logic based on scale type
         if (scale.scoringType === "pair_comparison") {
             // For VRIN-r and TRIN-r scales
-            rawScore = calculatePairComparisonScore(responses, scale);
+            rawScore = calculatePairComparisonScore(responses, scale, scaleId);
         } else {
             // For standard scales
             rawScore = calculateStandardScore(responses, scale);
@@ -1342,8 +1076,10 @@ function calculateRawScores(responses) {
  * @param {Object} scale - Scale definition object
  * @returns {number} - Raw score for the scale
  */
-function calculatePairComparisonScore(responses, scale) {
+function calculatePairComparisonScore(responses, scale, scaleId) {
     let score = 0;
+    let trueCount = 0;
+    let falseCount = 0;
 
     for (const pair of scale.itemPairs) {
         const [item1, item2] = pair.pair;
@@ -1355,21 +1091,30 @@ function calculatePairComparisonScore(responses, scale) {
             continue;
         }
 
-        if (scale.id === "VRIN-r") {
-            // For VRIN-r
-            if (pair.type === "similar" && response1 !== response2) {
+        if (scaleId === "VRIN-r") {
+            // VRIN-r: Score when responses to similar items differ,
+            // or when responses to opposite items agree
+            if (pair.scoreIf === "different" && response1 !== response2) {
                 score++;
-            } else if (pair.type === "opposite" && response1 === response2) {
+            } else if (pair.scoreIf === "same" && response1 === response2) {
                 score++;
             }
-        } else if (scale.id === "TRIN-r") {
-            // For TRIN-r
+        } else if (scaleId === "TRIN-r") {
+            // TRIN-r: Track both-true and both-false pairs separately
+            // Final score = trueCount - falseCount + base (number of false pairs)
             if (pair.scoreIf === "both_true" && response1 === true && response2 === true) {
-                score++;
+                trueCount++;
             } else if (pair.scoreIf === "both_false" && response1 === false && response2 === false) {
-                score++;
+                falseCount++;
             }
         }
+    }
+
+    if (scaleId === "TRIN-r") {
+        // TRIN-r raw score: trueCount - falseCount + base
+        // Base equals number of false-keyed pairs to center the scale
+        const falsePairs = scale.itemPairs.filter(p => p.scoreIf === "both_false").length;
+        score = trueCount - falseCount + falsePairs;
     }
 
     return score;
@@ -1406,24 +1151,49 @@ function calculateStandardScore(responses, scale) {
 }
 
 /**
- * Converts raw scores to T-scores using normative data
+ * Converts raw scores to T-scores using gender-specific normative lookup tables
+ * Based on Ben-Porath & Tellegen (2008/2011) standardization sample
  * @param {Object} rawScores - Object with scale IDs as keys and raw scores as values
- * @param {string} normGroup - Normative group to use (e.g., "male", "female")
+ * @param {string} gender - "male" or "female"
  * @returns {Object} - Object with scale IDs as keys and T-scores as values
  */
-function convertToTScores(rawScores, normGroup) {
-    // In a real implementation, this would use normative data tables
-    // For this demonstration, we'll use a simplified linear transformation
+function convertToTScores(rawScores, gender) {
     const tScores = {};
+    const genderNorms = normativeTables[gender] || normativeTables["male"];
 
     for (const [scaleId, rawScore] of Object.entries(rawScores)) {
-        // Simple linear transformation (this is just a placeholder)
-        // In reality, this would use proper normative data tables
-        const tScore = 50 + (rawScore * 10 / 15); // Simplified formula
-        tScores[scaleId] = Math.round(tScore);
+        const scaleNorms = genderNorms[scaleId];
+        if (scaleNorms) {
+            // Direct lookup from normative table
+            const raw = Math.max(0, Math.round(rawScore));
+            if (scaleNorms[raw] !== undefined) {
+                tScores[scaleId] = scaleNorms[raw];
+            } else {
+                // If raw score exceeds table, use highest available
+                const maxRaw = Math.max(...Object.keys(scaleNorms).map(Number));
+                tScores[scaleId] = raw >= maxRaw ? scaleNorms[maxRaw] : scaleNorms[0];
+            }
+        } else {
+            // Fallback: linear estimation (should not happen with complete tables)
+            console.warn(`No normative data for scale ${scaleId}, using linear estimate`);
+            tScores[scaleId] = Math.round(50 + (rawScore - 5) * 2);
+        }
     }
 
     return tScores;
+}
+
+/**
+ * Calculates Cannot Say (CNS) score - number of unanswered items
+ * @param {Object} responses - Object with question IDs as keys and boolean responses as values
+ * @returns {number} - Number of unanswered items
+ */
+function calculateCNS(responses) {
+    let answered = 0;
+    for (let i = 1; i <= 338; i++) {
+        if (responses[i] !== undefined) answered++;
+    }
+    return 338 - answered;
 }
 
 /**
@@ -1471,14 +1241,21 @@ function interpretScores(tScores) {
  * @param {Object} interpretations - Object with scale IDs as keys and interpretation objects as values
  * @returns {string} - Summary report text
  */
-function generateSummaryReport(interpretations) {
-    // This would be a more complex function in a real implementation
-    // For now, we'll just create a simple summary
+function generateSummaryReport(interpretations, results) {
+    let summary = "## MMPI-2-RF Assessment Summary\n\n";
 
-    let summary = "## Assessment Summary\n\n";
+    // Demographics and CNS
+    if (results) {
+        summary += `**Normative Group:** ${results.gender === 'male' ? 'Male' : 'Female'}\n`;
+        summary += `**Cannot Say (CNS):** ${results.cns || 0} items unanswered\n`;
+        if ((results.cns || 0) >= 18) {
+            summary += "\n**WARNING:** CNS >= 18. Profile may be invalid due to excessive unanswered items.\n";
+        }
+        summary += "\n";
+    }
 
     // Check validity scales first
-    const validityScales = ["VRIN-r", "TRIN-r", "F-r"];
+    const validityScales = ["VRIN-r", "TRIN-r", "F-r", "Fp-r", "Fs", "FBS-r", "RBS", "L-r", "K-r"];
     let validityIssues = false;
 
     summary += "### Validity Assessment\n\n";
@@ -1512,17 +1289,83 @@ function generateSummaryReport(interpretations) {
     // RC Scales
     const rcScales = ["RCd", "RC1", "RC2", "RC3", "RC4", "RC6", "RC7", "RC8", "RC9"];
     summary += "\n**Restructured Clinical Scales:**\n\n";
-
     for (const scale of rcScales) {
         if (interpretations[scale]) {
-            summary += `- **${mmpiScales[scale].name}**: ${interpretations[scale].level} (T-score: ${interpretations[scale].score})\n`;
+            summary += `- **${mmpiScales[scale] ? mmpiScales[scale].name : scale}**: ${interpretations[scale].level} (T-score: ${interpretations[scale].score})\n`;
         }
     }
 
-    // Overall impression
-    summary += "\n### Overall Impression\n\n";
-    summary += "This section would contain an integrated interpretation of the assessment results, taking into account patterns across scales and potential clinical implications.\n\n";
-    summary += "Note: This is an automated interpretation and should be reviewed by a qualified mental health professional.\n";
+    // Somatic/Cognitive Scales
+    const somaticScales = ["MLS", "GIC", "HPC", "NUC", "COG"];
+    summary += "\n**Somatic/Cognitive Scales:**\n\n";
+    for (const scale of somaticScales) {
+        if (interpretations[scale]) {
+            summary += `- **${mmpiScales[scale] ? mmpiScales[scale].name : scale}**: ${interpretations[scale].level} (T-score: ${interpretations[scale].score})\n`;
+        }
+    }
+
+    // Internalizing Scales
+    const intScales = ["SUI", "HLP", "SFD", "NFC", "STW", "AXY", "ANP", "BRF", "MSF"];
+    summary += "\n**Internalizing Scales:**\n\n";
+    for (const scale of intScales) {
+        if (interpretations[scale]) {
+            summary += `- **${mmpiScales[scale] ? mmpiScales[scale].name : scale}**: ${interpretations[scale].level} (T-score: ${interpretations[scale].score})\n`;
+        }
+    }
+
+    // Externalizing Scales
+    const extScales = ["JCP", "SUB", "AGG", "ACT"];
+    summary += "\n**Externalizing Scales:**\n\n";
+    for (const scale of extScales) {
+        if (interpretations[scale]) {
+            summary += `- **${mmpiScales[scale] ? mmpiScales[scale].name : scale}**: ${interpretations[scale].level} (T-score: ${interpretations[scale].score})\n`;
+        }
+    }
+
+    // Interpersonal Scales
+    const ipScales = ["FML", "IPP", "SAV", "SHY", "DSF"];
+    summary += "\n**Interpersonal Scales:**\n\n";
+    for (const scale of ipScales) {
+        if (interpretations[scale]) {
+            summary += `- **${mmpiScales[scale] ? mmpiScales[scale].name : scale}**: ${interpretations[scale].level} (T-score: ${interpretations[scale].score})\n`;
+        }
+    }
+
+    // Interest Scales
+    const interestScales = ["AES", "MEC"];
+    summary += "\n**Interest Scales:**\n\n";
+    for (const scale of interestScales) {
+        if (interpretations[scale]) {
+            summary += `- **${mmpiScales[scale] ? mmpiScales[scale].name : scale}**: ${interpretations[scale].level} (T-score: ${interpretations[scale].score})\n`;
+        }
+    }
+
+    // PSY-5 Scales
+    const psy5Scales = ["AGGR-r", "PSYC-r", "DISC-r", "NEGE-r", "INTR-r"];
+    summary += "\n**PSY-5 (Personality Psychopathology Five) Scales:**\n\n";
+    for (const scale of psy5Scales) {
+        if (interpretations[scale]) {
+            summary += `- **${mmpiScales[scale] ? mmpiScales[scale].name : scale}**: ${interpretations[scale].level} (T-score: ${interpretations[scale].score})\n`;
+        }
+    }
+
+    // Clinical significance summary
+    summary += "\n### Clinically Significant Elevations (T >= 65)\n\n";
+    const elevated = Object.entries(interpretations)
+        .filter(([_, interp]) => interp.score >= 65)
+        .sort((a, b) => b[1].score - a[1].score);
+
+    if (elevated.length === 0) {
+        summary += "No scales reached clinical significance.\n";
+    } else {
+        for (const [scaleId, interp] of elevated) {
+            const scaleName = mmpiScales[scaleId] ? mmpiScales[scaleId].name : scaleId;
+            summary += `- **${scaleId} (${scaleName})**: T = ${interp.score}\n`;
+        }
+    }
+
+    summary += "\n---\n";
+    summary += "*Note: This is an automated scoring report. All results must be interpreted by a qualified mental health professional in the context of the full clinical picture. T-scores are based on gender-specific normative data (Ben-Porath & Tellegen, 2008/2011).*\n";
 
     return summary;
 }
@@ -2679,14 +2522,27 @@ function saveAssessmentProgress(showConfirmation = true) {
  * Completes the assessment and shows results
  */
 function completeAssessment() {
+    // Prompt for gender to select normative group
+    const gender = appState.gender || prompt("Select normative group for scoring:\nEnter 'male' or 'female':", "male");
+    if (!gender || !["male", "female"].includes(gender.toLowerCase())) {
+        alert("Please enter 'male' or 'female' for normative scoring.");
+        return;
+    }
+    appState.gender = gender.toLowerCase();
+
+    // Calculate CNS (Cannot Say) score
+    const cns = calculateCNS(appState.responses);
+
     // Calculate scores
     const rawScores = calculateRawScores(appState.responses);
-    const tScores = convertToTScores(rawScores, 'general'); // Using general norms
+    const tScores = convertToTScores(rawScores, appState.gender);
     const interpretations = interpretScores(tScores);
 
     // Store results
     appState.results = {
         responses: appState.responses,
+        gender: appState.gender,
+        cns,
         rawScores,
         tScores,
         interpretations,
@@ -2694,7 +2550,7 @@ function completeAssessment() {
     };
 
     // Generate summary report
-    const summaryReport = generateSummaryReport(interpretations);
+    const summaryReport = generateSummaryReport(interpretations, appState.results);
 
     // Switch to results section
     showSection('results');
