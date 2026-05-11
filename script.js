@@ -2562,14 +2562,18 @@ function completeAssessment() {
         completedDate: new Date().toISOString()
     };
 
-    // Generate summary report
+    // Generate summary report (table-based) and narrative report (clinical prose)
     const summaryReport = generateSummaryReport(interpretations, appState.results);
+    let narrativeReport = '';
+    if (typeof generateNarrativeReport === 'function') {
+        narrativeReport = generateNarrativeReport(tScores, rawScores, cns);
+    }
 
     // Switch to results section
     showSection('results');
 
-    // Display results
-    displayResults(appState.results, summaryReport);
+    // Display results with narrative
+    displayResults(appState.results, summaryReport, narrativeReport);
 
     // Clear saved in-progress assessment
     if (isStorageAvailable()) {
@@ -2582,12 +2586,17 @@ function completeAssessment() {
  * @param {Object} results - Assessment results
  * @param {string} summaryReport - Summary report text
  */
-function displayResults(results, summaryReport) {
+function displayResults(results, summaryReport, narrativeReport) {
     // Display interpretations
     displayInterpretations(results.interpretations);
 
-    // Display summary
-    elements.results.resultsSummaryContent.innerHTML = marked.parse(summaryReport);
+    // Display summary (table-based + narrative)
+    let fullReport = summaryReport;
+    if (narrativeReport) {
+        fullReport += '\n\n---\n\n## Clinical Narrative Report\n\n';
+        fullReport += '<pre style="white-space: pre-wrap; font-family: Georgia, serif; font-size: 14px; line-height: 1.6; max-width: 800px;">' + narrativeReport + '</pre>';
+    }
+    elements.results.resultsSummaryContent.innerHTML = marked.parse(fullReport);
 
     // Initialize charts
     initializeResultCharts(results.tScores, results.interpretations, mmpiScales);
