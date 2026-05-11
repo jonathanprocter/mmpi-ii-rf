@@ -2205,7 +2205,20 @@ const elements = {
 /**
  * Initializes the application
  */
-function initializeApp() {
+async function initializeApp() {
+    // Load scale scoring keys from JSON file
+    if (typeof loadScaleKeysFromFile === 'function') {
+        const loaded = await loadScaleKeysFromFile('scale-keys.json');
+        if (loaded > 0) {
+            console.log(`Loaded scoring keys for ${loaded} scales`);
+            if (typeof validateScaleKeys === 'function') {
+                validateScaleKeys();
+            }
+        } else {
+            console.error('WARNING: No scale keys loaded - scoring will not work');
+        }
+    }
+
     // Set up event listeners
     setupEventListeners();
 
