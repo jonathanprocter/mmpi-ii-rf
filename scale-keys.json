@@ -1,0 +1,1014 @@
+{
+  "VRIN-r": {
+    "itemPairs": [
+      {"pair": [6, 136], "scoreIf": "different"},
+      {"pair": [8, 323], "scoreIf": "different"},
+      {"pair": [17, 94], "scoreIf": "different"},
+      {"pair": [24, 319], "scoreIf": "different"},
+      {"pair": [25, 174], "scoreIf": "different"},
+      {"pair": [29, 116], "scoreIf": "different"},
+      {"pair": [32, 257], "scoreIf": "different"},
+      {"pair": [35, 114], "scoreIf": "different"},
+      {"pair": [40, 144], "scoreIf": "different"},
+      {"pair": [44, 177], "scoreIf": "different"},
+      {"pair": [44, 177], "scoreIf": "different"},
+      {"pair": [47, 201], "scoreIf": "different"},
+      {"pair": [55, 99], "scoreIf": "different"},
+      {"pair": [55, 171], "scoreIf": "different"},
+      {"pair": [58, 180], "scoreIf": "different"},
+      {"pair": [60, 327], "scoreIf": "different"},
+      {"pair": [62, 74], "scoreIf": "different"},
+      {"pair": [66, 223], "scoreIf": "different"},
+      {"pair": [67, 278], "scoreIf": "different"},
+      {"pair": [71, 264], "scoreIf": "different"},
+      {"pair": [79, 289], "scoreIf": "different"},
+      {"pair": [83, 105], "scoreIf": "different"},
+      {"pair": [88, 265], "scoreIf": "different"},
+      {"pair": [89, 232], "scoreIf": "different"},
+      {"pair": [93, 164], "scoreIf": "different"},
+      {"pair": [93, 164], "scoreIf": "different"},
+      {"pair": [95, 144], "scoreIf": "different"},
+      {"pair": [108, 152], "scoreIf": "different"},
+      {"pair": [108, 152], "scoreIf": "different"},
+      {"pair": [119, 303], "scoreIf": "different"},
+      {"pair": [123, 338], "scoreIf": "different"},
+      {"pair": [134, 293], "scoreIf": "different"},
+      {"pair": [141, 266], "scoreIf": "different"},
+      {"pair": [146, 275], "scoreIf": "different"},
+      {"pair": [147, 276], "scoreIf": "different"},
+      {"pair": [156, 205], "scoreIf": "different"},
+      {"pair": [158, 228], "scoreIf": "different"},
+      {"pair": [158, 261], "scoreIf": "different"},
+      {"pair": [165, 317], "scoreIf": "different"},
+      {"pair": [166, 207], "scoreIf": "different"},
+      {"pair": [175, 291], "scoreIf": "different"},
+      {"pair": [175, 291], "scoreIf": "different"},
+      {"pair": [187, 331], "scoreIf": "different"},
+      {"pair": [194, 233], "scoreIf": "different"},
+      {"pair": [196, 245], "scoreIf": "different"},
+      {"pair": [213, 260], "scoreIf": "different"},
+      {"pair": [219, 267], "scoreIf": "different"},
+      {"pair": [239, 302], "scoreIf": "different"},
+      {"pair": [246, 282], "scoreIf": "different"},
+      {"pair": [252, 287], "scoreIf": "different"},
+      {"pair": [299, 324], "scoreIf": "different"},
+      {"pair": [316, 329], "scoreIf": "different"},
+      {"pair": [318, 337], "scoreIf": "different"}
+    ]
+  },
+  "TRIN-r": {
+    "itemPairs": [
+      {"pair": [17, 44], "scoreIf": "both_true"},
+      {"pair": [30, 217], "scoreIf": "both_true"},
+      {"pair": [37, 322], "scoreIf": "both_true"},
+      {"pair": [48, 182], "scoreIf": "both_true"},
+      {"pair": [57, 67], "scoreIf": "both_true"},
+      {"pair": [83, 120], "scoreIf": "both_true"},
+      {"pair": [101, 189], "scoreIf": "both_true"},
+      {"pair": [109, 278], "scoreIf": "both_true"},
+      {"pair": [134, 248], "scoreIf": "both_true"},
+      {"pair": [146, 293], "scoreIf": "both_true"},
+      {"pair": [158, 202], "scoreIf": "both_true"},
+      {"pair": [169, 282], "scoreIf": "both_true"},
+      {"pair": [212, 264], "scoreIf": "both_true"},
+      {"pair": [234, 261], "scoreIf": "both_true"},
+      {"pair": [269, 314], "scoreIf": "both_true"},
+      {"pair": [4, 22], "scoreIf": "both_false"},
+      {"pair": [44, 94], "scoreIf": "both_false"},
+      {"pair": [59, 306], "scoreIf": "both_false"},
+      {"pair": [73, 338], "scoreIf": "both_false"},
+      {"pair": [83, 158], "scoreIf": "both_false"},
+      {"pair": [108, 246], "scoreIf": "both_false"},
+      {"pair": [119, 134], "scoreIf": "both_false"},
+      {"pair": [147, 319], "scoreIf": "both_false"},
+      {"pair": [178, 221], "scoreIf": "both_false"},
+      {"pair": [201, 278], "scoreIf": "both_false"},
+      {"pair": [261, 293], "scoreIf": "both_false"}
+    ]
+  },
+  "F-r": {
+    "items": [
+      {"id": 14, "key": true},
+      {"id": 30, "key": true},
+      {"id": 46, "key": true},
+      {"id": 56, "key": true},
+      {"id": 67, "key": true},
+      {"id": 71, "key": true},
+      {"id": 74, "key": true},
+      {"id": 106, "key": true},
+      {"id": 117, "key": true},
+      {"id": 120, "key": true},
+      {"id": 139, "key": true},
+      {"id": 146, "key": true},
+      {"id": 164, "key": true},
+      {"id": 203, "key": true},
+      {"id": 218, "key": true},
+      {"id": 231, "key": true},
+      {"id": 240, "key": true},
+      {"id": 253, "key": true},
+      {"id": 264, "key": true},
+      {"id": 275, "key": true},
+      {"id": 277, "key": true},
+      {"id": 281, "key": true},
+      {"id": 294, "key": true},
+      {"id": 301, "key": true},
+      {"id": 310, "key": true},
+      {"id": 312, "key": true},
+      {"id": 332, "key": true},
+      {"id": 59, "key": false},
+      {"id": 83, "key": false},
+      {"id": 102, "key": false},
+      {"id": 174, "key": false},
+      {"id": 227, "key": false}
+    ]
+  },
+  "Fp-r": {
+    "items": [
+      {"id": 40, "key": true},
+      {"id": 41, "key": true},
+      {"id": 79, "key": true},
+      {"id": 86, "key": true},
+      {"id": 124, "key": true},
+      {"id": 129, "key": true},
+      {"id": 150, "key": true},
+      {"id": 168, "key": true},
+      {"id": 178, "key": true},
+      {"id": 191, "key": true},
+      {"id": 208, "key": true},
+      {"id": 252, "key": true},
+      {"id": 255, "key": true},
+      {"id": 270, "key": true},
+      {"id": 314, "key": true},
+      {"id": 317, "key": true},
+      {"id": 7, "key": false},
+      {"id": 98, "key": false},
+      {"id": 157, "key": false},
+      {"id": 221, "key": false},
+      {"id": 283, "key": false}
+    ]
+  },
+  "Fs": {
+    "items": [
+      {"id": 15, "key": true},
+      {"id": 33, "key": true},
+      {"id": 43, "key": true},
+      {"id": 122, "key": true},
+      {"id": 133, "key": true},
+      {"id": 137, "key": true},
+      {"id": 159, "key": true},
+      {"id": 170, "key": true},
+      {"id": 199, "key": true},
+      {"id": 216, "key": true},
+      {"id": 225, "key": true},
+      {"id": 308, "key": true},
+      {"id": 2, "key": false},
+      {"id": 78, "key": false},
+      {"id": 186, "key": false},
+      {"id": 272, "key": false}
+    ]
+  },
+  "FBS-r": {
+    "items": [
+      {"id": 6, "key": true},
+      {"id": 15, "key": true},
+      {"id": 43, "key": true},
+      {"id": 76, "key": true},
+      {"id": 77, "key": true},
+      {"id": 79, "key": true},
+      {"id": 93, "key": true},
+      {"id": 101, "key": true},
+      {"id": 133, "key": true},
+      {"id": 187, "key": true},
+      {"id": 200, "key": true},
+      {"id": 210, "key": true},
+      {"id": 230, "key": true},
+      {"id": 247, "key": true},
+      {"id": 261, "key": true},
+      {"id": 315, "key": true},
+      {"id": 36, "key": false},
+      {"id": 45, "key": false},
+      {"id": 55, "key": false},
+      {"id": 88, "key": false},
+      {"id": 99, "key": false},
+      {"id": 141, "key": false},
+      {"id": 156, "key": false},
+      {"id": 162, "key": false},
+      {"id": 171, "key": false},
+      {"id": 189, "key": false},
+      {"id": 193, "key": false},
+      {"id": 234, "key": false},
+      {"id": 265, "key": false},
+      {"id": 290, "key": false}
+    ]
+  },
+  "RBS": {
+    "items": [
+      {"id": 6, "key": true},
+      {"id": 24, "key": true},
+      {"id": 26, "key": true},
+      {"id": 31, "key": true},
+      {"id": 68, "key": true},
+      {"id": 74, "key": true},
+      {"id": 79, "key": true},
+      {"id": 92, "key": true},
+      {"id": 101, "key": true},
+      {"id": 106, "key": true},
+      {"id": 120, "key": true},
+      {"id": 132, "key": true},
+      {"id": 136, "key": true},
+      {"id": 137, "key": true},
+      {"id": 159, "key": true},
+      {"id": 242, "key": true},
+      {"id": 252, "key": true},
+      {"id": 268, "key": true},
+      {"id": 273, "key": true},
+      {"id": 11, "key": false},
+      {"id": 21, "key": false},
+      {"id": 53, "key": false},
+      {"id": 59, "key": false},
+      {"id": 125, "key": false},
+      {"id": 131, "key": false},
+      {"id": 156, "key": false},
+      {"id": 219, "key": false},
+      {"id": 325, "key": false}
+    ]
+  },
+  "L-r": {
+    "items": [
+      {"id": 61, "key": true},
+      {"id": 182, "key": true},
+      {"id": 268, "key": true},
+      {"id": 16, "key": false},
+      {"id": 45, "key": false},
+      {"id": 70, "key": false},
+      {"id": 95, "key": false},
+      {"id": 127, "key": false},
+      {"id": 154, "key": false},
+      {"id": 183, "key": false},
+      {"id": 211, "key": false},
+      {"id": 241, "key": false},
+      {"id": 298, "key": false},
+      {"id": 325, "key": false}
+    ]
+  },
+  "K-r": {
+    "items": [
+      {"id": 80, "key": true},
+      {"id": 202, "key": true},
+      {"id": 10, "key": false},
+      {"id": 23, "key": false},
+      {"id": 36, "key": false},
+      {"id": 44, "key": false},
+      {"id": 72, "key": false},
+      {"id": 89, "key": false},
+      {"id": 99, "key": false},
+      {"id": 155, "key": false},
+      {"id": 171, "key": false},
+      {"id": 187, "key": false},
+      {"id": 322, "key": false},
+      {"id": 338, "key": false}
+    ]
+  },
+  "EID": {
+    "items": [
+      {"id": 22, "key": true},
+      {"id": 30, "key": true},
+      {"id": 35, "key": true},
+      {"id": 48, "key": true},
+      {"id": 89, "key": true},
+      {"id": 91, "key": true},
+      {"id": 114, "key": true},
+      {"id": 119, "key": true},
+      {"id": 120, "key": true},
+      {"id": 158, "key": true},
+      {"id": 167, "key": true},
+      {"id": 169, "key": true},
+      {"id": 172, "key": true},
+      {"id": 187, "key": true},
+      {"id": 204, "key": true},
+      {"id": 228, "key": true},
+      {"id": 232, "key": true},
+      {"id": 250, "key": true},
+      {"id": 261, "key": true},
+      {"id": 288, "key": true},
+      {"id": 322, "key": true},
+      {"id": 331, "key": true},
+      {"id": 335, "key": true},
+      {"id": 4, "key": false},
+      {"id": 17, "key": false},
+      {"id": 25, "key": false},
+      {"id": 37, "key": false},
+      {"id": 57, "key": false},
+      {"id": 64, "key": false},
+      {"id": 73, "key": false},
+      {"id": 83, "key": false},
+      {"id": 102, "key": false},
+      {"id": 105, "key": false},
+      {"id": 140, "key": false},
+      {"id": 202, "key": false},
+      {"id": 217, "key": false},
+      {"id": 222, "key": false},
+      {"id": 234, "key": false},
+      {"id": 246, "key": false},
+      {"id": 282, "key": false},
+      {"id": 293, "key": false}
+    ]
+  },
+  "THD": {
+    "items": [
+      {"id": 12, "key": true},
+      {"id": 14, "key": true},
+      {"id": 46, "key": true},
+      {"id": 71, "key": true},
+      {"id": 92, "key": true},
+      {"id": 110, "key": true},
+      {"id": 122, "key": true},
+      {"id": 129, "key": true},
+      {"id": 139, "key": true},
+      {"id": 150, "key": true},
+      {"id": 168, "key": true},
+      {"id": 179, "key": true},
+      {"id": 199, "key": true},
+      {"id": 203, "key": true},
+      {"id": 216, "key": true},
+      {"id": 252, "key": true},
+      {"id": 264, "key": true},
+      {"id": 270, "key": true},
+      {"id": 273, "key": true},
+      {"id": 287, "key": true},
+      {"id": 294, "key": true},
+      {"id": 311, "key": true},
+      {"id": 330, "key": true},
+      {"id": 332, "key": true},
+      {"id": 85, "key": false},
+      {"id": 212, "key": false}
+    ]
+  },
+  "BXD": {
+    "items": [
+      {"id": 21, "key": true},
+      {"id": 49, "key": true},
+      {"id": 66, "key": true},
+      {"id": 84, "key": true},
+      {"id": 96, "key": true},
+      {"id": 107, "key": true},
+      {"id": 131, "key": true},
+      {"id": 156, "key": true},
+      {"id": 193, "key": true},
+      {"id": 205, "key": true},
+      {"id": 223, "key": true},
+      {"id": 226, "key": true},
+      {"id": 231, "key": true},
+      {"id": 248, "key": true},
+      {"id": 253, "key": true},
+      {"id": 266, "key": true},
+      {"id": 292, "key": true},
+      {"id": 312, "key": true},
+      {"id": 316, "key": true},
+      {"id": 329, "key": true},
+      {"id": 61, "key": false},
+      {"id": 190, "key": false},
+      {"id": 237, "key": false}
+    ]
+  },
+  "RCd": {
+    "items": [
+      {"id": 6, "key": true},
+      {"id": 22, "key": true},
+      {"id": 30, "key": true},
+      {"id": 48, "key": true},
+      {"id": 62, "key": true},
+      {"id": 74, "key": true},
+      {"id": 89, "key": true},
+      {"id": 117, "key": true},
+      {"id": 130, "key": true},
+      {"id": 144, "key": true},
+      {"id": 158, "key": true},
+      {"id": 172, "key": true},
+      {"id": 187, "key": true},
+      {"id": 204, "key": true},
+      {"id": 232, "key": true},
+      {"id": 247, "key": true},
+      {"id": 261, "key": true},
+      {"id": 274, "key": true},
+      {"id": 288, "key": true},
+      {"id": 299, "key": true},
+      {"id": 315, "key": true},
+      {"id": 331, "key": true},
+      {"id": 105, "key": false},
+      {"id": 217, "key": false}
+    ]
+  },
+  "RC1": {
+    "items": [
+      {"id": 15, "key": true},
+      {"id": 43, "key": true},
+      {"id": 76, "key": true},
+      {"id": 101, "key": true},
+      {"id": 137, "key": true},
+      {"id": 176, "key": true},
+      {"id": 230, "key": true},
+      {"id": 242, "key": true},
+      {"id": 277, "key": true},
+      {"id": 301, "key": true},
+      {"id": 328, "key": true},
+      {"id": 2, "key": false},
+      {"id": 28, "key": false},
+      {"id": 52, "key": false},
+      {"id": 65, "key": false},
+      {"id": 69, "key": false},
+      {"id": 88, "key": false},
+      {"id": 113, "key": false},
+      {"id": 125, "key": false},
+      {"id": 162, "key": false},
+      {"id": 174, "key": false},
+      {"id": 189, "key": false},
+      {"id": 227, "key": false},
+      {"id": 254, "key": false},
+      {"id": 265, "key": false},
+      {"id": 290, "key": false},
+      {"id": 313, "key": false}
+    ]
+  },
+  "RC2": {
+    "items": [
+      {"id": 4, "key": false},
+      {"id": 17, "key": false},
+      {"id": 25, "key": false},
+      {"id": 53, "key": false},
+      {"id": 64, "key": false},
+      {"id": 83, "key": false},
+      {"id": 102, "key": false},
+      {"id": 140, "key": false},
+      {"id": 160, "key": false},
+      {"id": 182, "key": false},
+      {"id": 195, "key": false},
+      {"id": 202, "key": false},
+      {"id": 222, "key": false},
+      {"id": 246, "key": false},
+      {"id": 282, "key": false},
+      {"id": 302, "key": false},
+      {"id": 323, "key": false}
+    ]
+  },
+  "RC3": {
+    "items": [
+      {"id": 10, "key": true},
+      {"id": 36, "key": true},
+      {"id": 55, "key": true},
+      {"id": 87, "key": true},
+      {"id": 99, "key": true},
+      {"id": 121, "key": true},
+      {"id": 142, "key": true},
+      {"id": 171, "key": true},
+      {"id": 185, "key": true},
+      {"id": 213, "key": true},
+      {"id": 238, "key": true},
+      {"id": 260, "key": true},
+      {"id": 279, "key": true},
+      {"id": 304, "key": true},
+      {"id": 326, "key": true}
+    ]
+  },
+  "RC4": {
+    "items": [
+      {"id": 5, "key": true},
+      {"id": 21, "key": true},
+      {"id": 49, "key": true},
+      {"id": 66, "key": true},
+      {"id": 96, "key": true},
+      {"id": 141, "key": true},
+      {"id": 156, "key": true},
+      {"id": 173, "key": true},
+      {"id": 205, "key": true},
+      {"id": 218, "key": true},
+      {"id": 223, "key": true},
+      {"id": 253, "key": true},
+      {"id": 266, "key": true},
+      {"id": 297, "key": true},
+      {"id": 312, "key": true},
+      {"id": 329, "key": true},
+      {"id": 19, "key": false},
+      {"id": 38, "key": false},
+      {"id": 80, "key": false},
+      {"id": 126, "key": false},
+      {"id": 190, "key": false},
+      {"id": 237, "key": false}
+    ]
+  },
+  "RC6": {
+    "items": [
+      {"id": 14, "key": true},
+      {"id": 34, "key": true},
+      {"id": 71, "key": true},
+      {"id": 92, "key": true},
+      {"id": 110, "key": true},
+      {"id": 129, "key": true},
+      {"id": 150, "key": true},
+      {"id": 168, "key": true},
+      {"id": 194, "key": true},
+      {"id": 233, "key": true},
+      {"id": 252, "key": true},
+      {"id": 264, "key": true},
+      {"id": 270, "key": true},
+      {"id": 287, "key": true},
+      {"id": 310, "key": true},
+      {"id": 332, "key": true},
+      {"id": 212, "key": false}
+    ]
+  },
+  "RC7": {
+    "items": [
+      {"id": 9, "key": true},
+      {"id": 23, "key": true},
+      {"id": 35, "key": true},
+      {"id": 51, "key": true},
+      {"id": 63, "key": true},
+      {"id": 77, "key": true},
+      {"id": 91, "key": true},
+      {"id": 112, "key": true},
+      {"id": 119, "key": true},
+      {"id": 132, "key": true},
+      {"id": 146, "key": true},
+      {"id": 149, "key": true},
+      {"id": 161, "key": true},
+      {"id": 206, "key": true},
+      {"id": 228, "key": true},
+      {"id": 235, "key": true},
+      {"id": 250, "key": true},
+      {"id": 263, "key": true},
+      {"id": 275, "key": true},
+      {"id": 289, "key": true},
+      {"id": 303, "key": true},
+      {"id": 318, "key": true},
+      {"id": 322, "key": true},
+      {"id": 335, "key": true}
+    ]
+  },
+  "RC8": {
+    "items": [
+      {"id": 12, "key": true},
+      {"id": 32, "key": true},
+      {"id": 46, "key": true},
+      {"id": 106, "key": true},
+      {"id": 122, "key": true},
+      {"id": 139, "key": true},
+      {"id": 159, "key": true},
+      {"id": 179, "key": true},
+      {"id": 199, "key": true},
+      {"id": 203, "key": true},
+      {"id": 216, "key": true},
+      {"id": 240, "key": true},
+      {"id": 257, "key": true},
+      {"id": 273, "key": true},
+      {"id": 294, "key": true},
+      {"id": 311, "key": true},
+      {"id": 330, "key": true},
+      {"id": 85, "key": false}
+    ]
+  },
+  "RC9": {
+    "items": [
+      {"id": 13, "key": true},
+      {"id": 26, "key": true},
+      {"id": 39, "key": true},
+      {"id": 47, "key": true},
+      {"id": 72, "key": true},
+      {"id": 84, "key": true},
+      {"id": 97, "key": true},
+      {"id": 107, "key": true},
+      {"id": 118, "key": true},
+      {"id": 131, "key": true},
+      {"id": 143, "key": true},
+      {"id": 155, "key": true},
+      {"id": 166, "key": true},
+      {"id": 181, "key": true},
+      {"id": 193, "key": true},
+      {"id": 207, "key": true},
+      {"id": 219, "key": true},
+      {"id": 231, "key": true},
+      {"id": 244, "key": true},
+      {"id": 248, "key": true},
+      {"id": 256, "key": true},
+      {"id": 267, "key": true},
+      {"id": 292, "key": true},
+      {"id": 305, "key": true},
+      {"id": 316, "key": true},
+      {"id": 327, "key": true},
+      {"id": 337, "key": true},
+      {"id": 61, "key": false}
+    ]
+  },
+  "MLS": {
+    "items": [
+      {"id": 18, "key": true},
+      {"id": 4, "key": false},
+      {"id": 25, "key": false},
+      {"id": 163, "key": false},
+      {"id": 174, "key": false},
+      {"id": 202, "key": false},
+      {"id": 262, "key": false},
+      {"id": 333, "key": false}
+    ]
+  },
+  "GIC": {
+    "items": [
+      {"id": 43, "key": true},
+      {"id": 76, "key": true},
+      {"id": 210, "key": true},
+      {"id": 230, "key": true},
+      {"id": 2, "key": false}
+    ]
+  },
+  "HPC": {
+    "items": [
+      {"id": 101, "key": true},
+      {"id": 176, "key": true},
+      {"id": 328, "key": true},
+      {"id": 88, "key": false},
+      {"id": 189, "key": false},
+      {"id": 265, "key": false}
+    ]
+  },
+  "NUC": {
+    "items": [
+      {"id": 122, "key": true},
+      {"id": 277, "key": true},
+      {"id": 301, "key": true},
+      {"id": 69, "key": false},
+      {"id": 113, "key": false},
+      {"id": 125, "key": false},
+      {"id": 162, "key": false},
+      {"id": 186, "key": false},
+      {"id": 227, "key": false},
+      {"id": 313, "key": false}
+    ]
+  },
+  "COG": {
+    "items": [
+      {"id": 31, "key": true},
+      {"id": 136, "key": true},
+      {"id": 159, "key": true},
+      {"id": 200, "key": true},
+      {"id": 240, "key": true},
+      {"id": 257, "key": true},
+      {"id": 280, "key": true},
+      {"id": 306, "key": true},
+      {"id": 59, "key": false},
+      {"id": 102, "key": false}
+    ]
+  },
+  "SUI": {
+    "items": [
+      {"id": 93, "key": true},
+      {"id": 120, "key": true},
+      {"id": 164, "key": true},
+      {"id": 251, "key": true},
+      {"id": 334, "key": true}
+    ]
+  },
+  "HLP": {
+    "items": [
+      {"id": 135, "key": true},
+      {"id": 169, "key": true},
+      {"id": 214, "key": true},
+      {"id": 336, "key": true},
+      {"id": 282, "key": false}
+    ]
+  },
+  "SFD": {
+    "items": [
+      {"id": 48, "key": true},
+      {"id": 89, "key": true},
+      {"id": 232, "key": true},
+      {"id": 288, "key": true}
+    ]
+  },
+  "NFC": {
+    "items": [
+      {"id": 27, "key": true},
+      {"id": 68, "key": true},
+      {"id": 108, "key": true},
+      {"id": 152, "key": true},
+      {"id": 198, "key": true},
+      {"id": 229, "key": true},
+      {"id": 271, "key": true},
+      {"id": 274, "key": true},
+      {"id": 324, "key": true}
+    ]
+  },
+  "STW": {
+    "items": [
+      {"id": 29, "key": true},
+      {"id": 123, "key": true},
+      {"id": 167, "key": true},
+      {"id": 224, "key": true},
+      {"id": 309, "key": true},
+      {"id": 73, "key": false},
+      {"id": 234, "key": false}
+    ]
+  },
+  "AXY": {
+    "items": [
+      {"id": 79, "key": true},
+      {"id": 146, "key": true},
+      {"id": 228, "key": true},
+      {"id": 275, "key": true},
+      {"id": 289, "key": true}
+    ]
+  },
+  "ANP": {
+    "items": [
+      {"id": 119, "key": true},
+      {"id": 155, "key": true},
+      {"id": 248, "key": true},
+      {"id": 303, "key": true},
+      {"id": 318, "key": true},
+      {"id": 134, "key": false},
+      {"id": 293, "key": false}
+    ]
+  },
+  "BRF": {
+    "items": [
+      {"id": 20, "key": true},
+      {"id": 56, "key": true},
+      {"id": 90, "key": true},
+      {"id": 165, "key": true},
+      {"id": 208, "key": true},
+      {"id": 243, "key": true},
+      {"id": 284, "key": true},
+      {"id": 317, "key": true},
+      {"id": 128, "key": false}
+    ]
+  },
+  "MSF": {
+    "items": [
+      {"id": 54, "key": true},
+      {"id": 151, "key": true},
+      {"id": 258, "key": true},
+      {"id": 320, "key": true},
+      {"id": 82, "key": false},
+      {"id": 115, "key": false},
+      {"id": 184, "key": false},
+      {"id": 220, "key": false},
+      {"id": 286, "key": false}
+    ]
+  },
+  "JCP": {
+    "items": [
+      {"id": 21, "key": true},
+      {"id": 66, "key": true},
+      {"id": 96, "key": true},
+      {"id": 205, "key": true},
+      {"id": 223, "key": true},
+      {"id": 253, "key": true}
+    ]
+  },
+  "SUB": {
+    "items": [
+      {"id": 49, "key": true},
+      {"id": 86, "key": true},
+      {"id": 141, "key": true},
+      {"id": 192, "key": true},
+      {"id": 266, "key": true},
+      {"id": 297, "key": true},
+      {"id": 237, "key": false}
+    ]
+  },
+  "AGG": {
+    "items": [
+      {"id": 23, "key": true},
+      {"id": 26, "key": true},
+      {"id": 41, "key": true},
+      {"id": 84, "key": true},
+      {"id": 231, "key": true},
+      {"id": 312, "key": true},
+      {"id": 316, "key": true},
+      {"id": 329, "key": true},
+      {"id": 337, "key": true}
+    ]
+  },
+  "ACT": {
+    "items": [
+      {"id": 72, "key": true},
+      {"id": 81, "key": true},
+      {"id": 166, "key": true},
+      {"id": 181, "key": true},
+      {"id": 207, "key": true},
+      {"id": 219, "key": true},
+      {"id": 267, "key": true},
+      {"id": 285, "key": true}
+    ]
+  },
+  "FML": {
+    "items": [
+      {"id": 58, "key": true},
+      {"id": 103, "key": true},
+      {"id": 138, "key": true},
+      {"id": 180, "key": true},
+      {"id": 215, "key": true},
+      {"id": 281, "key": true},
+      {"id": 307, "key": true},
+      {"id": 19, "key": false},
+      {"id": 80, "key": false},
+      {"id": 269, "key": false}
+    ]
+  },
+  "IPP": {
+    "items": [
+      {"id": 24, "key": true},
+      {"id": 60, "key": false},
+      {"id": 104, "key": false},
+      {"id": 147, "key": false},
+      {"id": 197, "key": false},
+      {"id": 239, "key": false},
+      {"id": 276, "key": false},
+      {"id": 302, "key": false},
+      {"id": 321, "key": false},
+      {"id": 327, "key": false}
+    ]
+  },
+  "SAV": {
+    "items": [
+      {"id": 278, "key": true},
+      {"id": 11, "key": false},
+      {"id": 17, "key": false},
+      {"id": 47, "key": false},
+      {"id": 57, "key": false},
+      {"id": 94, "key": false},
+      {"id": 109, "key": false},
+      {"id": 153, "key": false},
+      {"id": 201, "key": false},
+      {"id": 222, "key": false}
+    ]
+  },
+  "SHY": {
+    "items": [
+      {"id": 35, "key": true},
+      {"id": 44, "key": true},
+      {"id": 91, "key": true},
+      {"id": 114, "key": true},
+      {"id": 177, "key": true},
+      {"id": 249, "key": true},
+      {"id": 295, "key": false}
+    ]
+  },
+  "DSF": {
+    "items": [
+      {"id": 67, "key": true},
+      {"id": 124, "key": true},
+      {"id": 175, "key": true},
+      {"id": 236, "key": true},
+      {"id": 291, "key": true},
+      {"id": 8, "key": false}
+    ]
+  },
+  "AES": {
+    "items": [
+      {"id": 3, "key": true},
+      {"id": 50, "key": true},
+      {"id": 100, "key": true},
+      {"id": 145, "key": true},
+      {"id": 196, "key": true},
+      {"id": 245, "key": true},
+      {"id": 296, "key": true}
+    ]
+  },
+  "MEC": {
+    "items": [
+      {"id": 1, "key": true},
+      {"id": 42, "key": true},
+      {"id": 75, "key": true},
+      {"id": 111, "key": true},
+      {"id": 148, "key": true},
+      {"id": 188, "key": true},
+      {"id": 226, "key": true},
+      {"id": 259, "key": true},
+      {"id": 300, "key": true}
+    ]
+  },
+  "AGGR-r": {
+    "items": [
+      {"id": 26, "key": true},
+      {"id": 39, "key": true},
+      {"id": 84, "key": true},
+      {"id": 104, "key": true},
+      {"id": 147, "key": true},
+      {"id": 182, "key": true},
+      {"id": 197, "key": true},
+      {"id": 231, "key": true},
+      {"id": 239, "key": true},
+      {"id": 256, "key": true},
+      {"id": 276, "key": true},
+      {"id": 302, "key": true},
+      {"id": 316, "key": true},
+      {"id": 321, "key": true},
+      {"id": 327, "key": true},
+      {"id": 329, "key": true},
+      {"id": 24, "key": false},
+      {"id": 319, "key": false}
+    ]
+  },
+  "PSYC-r": {
+    "items": [
+      {"id": 12, "key": true},
+      {"id": 14, "key": true},
+      {"id": 34, "key": true},
+      {"id": 40, "key": true},
+      {"id": 46, "key": true},
+      {"id": 71, "key": true},
+      {"id": 92, "key": true},
+      {"id": 129, "key": true},
+      {"id": 137, "key": true},
+      {"id": 139, "key": true},
+      {"id": 150, "key": true},
+      {"id": 168, "key": true},
+      {"id": 179, "key": true},
+      {"id": 199, "key": true},
+      {"id": 203, "key": true},
+      {"id": 216, "key": true},
+      {"id": 240, "key": true},
+      {"id": 252, "key": true},
+      {"id": 264, "key": true},
+      {"id": 270, "key": true},
+      {"id": 287, "key": true},
+      {"id": 294, "key": true},
+      {"id": 311, "key": true},
+      {"id": 330, "key": true},
+      {"id": 332, "key": true},
+      {"id": 85, "key": false}
+    ]
+  },
+  "DISC-r": {
+    "items": [
+      {"id": 21, "key": true},
+      {"id": 42, "key": true},
+      {"id": 49, "key": true},
+      {"id": 66, "key": true},
+      {"id": 75, "key": true},
+      {"id": 107, "key": true},
+      {"id": 115, "key": true},
+      {"id": 131, "key": true},
+      {"id": 156, "key": true},
+      {"id": 193, "key": true},
+      {"id": 205, "key": true},
+      {"id": 223, "key": true},
+      {"id": 226, "key": true},
+      {"id": 253, "key": true},
+      {"id": 292, "key": true},
+      {"id": 297, "key": true},
+      {"id": 300, "key": true},
+      {"id": 61, "key": false},
+      {"id": 190, "key": false},
+      {"id": 237, "key": false}
+    ]
+  },
+  "NEGE-r": {
+    "items": [
+      {"id": 9, "key": true},
+      {"id": 23, "key": true},
+      {"id": 29, "key": true},
+      {"id": 56, "key": true},
+      {"id": 77, "key": true},
+      {"id": 116, "key": true},
+      {"id": 123, "key": true},
+      {"id": 146, "key": true},
+      {"id": 155, "key": true},
+      {"id": 167, "key": true},
+      {"id": 206, "key": true},
+      {"id": 209, "key": true},
+      {"id": 263, "key": true},
+      {"id": 277, "key": true},
+      {"id": 309, "key": true},
+      {"id": 37, "key": false},
+      {"id": 73, "key": false},
+      {"id": 134, "key": false},
+      {"id": 234, "key": false},
+      {"id": 293, "key": false}
+    ]
+  },
+  "INTR-r": {
+    "items": [
+      {"id": 4, "key": false},
+      {"id": 11, "key": false},
+      {"id": 17, "key": false},
+      {"id": 47, "key": false},
+      {"id": 53, "key": false},
+      {"id": 57, "key": false},
+      {"id": 64, "key": false},
+      {"id": 102, "key": false},
+      {"id": 109, "key": false},
+      {"id": 118, "key": false},
+      {"id": 140, "key": false},
+      {"id": 153, "key": false},
+      {"id": 166, "key": false},
+      {"id": 181, "key": false},
+      {"id": 195, "key": false},
+      {"id": 201, "key": false},
+      {"id": 207, "key": false},
+      {"id": 222, "key": false},
+      {"id": 246, "key": false},
+      {"id": 323, "key": false}
+    ]
+  }
+}
