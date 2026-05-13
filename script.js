@@ -2357,6 +2357,18 @@ function loadUserSettings() {
  * Starts a new assessment
  */
 function startAssessment() {
+    // Capture client info before starting
+    const nameField = document.getElementById('client-name');
+    const codeField = document.getElementById('client-code');
+    appState.clientName = nameField ? nameField.value.trim() : '';
+    appState.clientCode = codeField ? codeField.value.trim() : '';
+
+    if (!appState.clientName) {
+        alert('Please enter your name before beginning the assessment.');
+        if (nameField) nameField.focus();
+        return;
+    }
+
     // Switch to assessment section
     showSection('assessment');
 
@@ -2575,10 +2587,58 @@ function completeAssessment() {
     // Display results with narrative
     displayResults(appState.results, summaryReport, narrativeReport);
 
+    // Submit results to server for clinician review
+    submitResultsToServer(appState.results, narrativeReport);
+
     // Clear saved in-progress assessment
     if (isStorageAvailable()) {
         clearCurrentAssessment();
     }
+}
+
+/**
+ * Submits completed assessment results to the server for clinician review.
+ * Results are stored server-side so the clinician can access them later.
+ * @param {Object} results - Complete assessment results
+ * @param {string} narrativeReport - Generated narrative report text
+ */
+function submitResultsToServer(results, narrativeReport) {
+    // Get client info from the intro form
+    const clientName = document.querySelector('#client-name')?.value ||
+                       document.querySelector('[name="client-name"]')?.value ||
+                       appState.clientName || 'Anonymous';
+    const clientCode = document.querySelector('#client-code')?.value ||
+                       document.querySelector('[name="client-code"]')?.value ||
+                       appState.clientCode || '';
+
+    const payload = {
+        clientName: clientName,
+        clientCode: clientCode,
+        completedDate: results.completedDate,
+        cns: results.cns || 0,
+        responses: results.responses,
+        rawScores: results.rawScores,
+        tScores: results.tScores,
+        interpretations: results.interpretations,
+        narrativeReport: narrativeReport || ''
+    };
+
+    fetch('/assess/mmpi-2-rf/api/submit-results', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'ok') {
+            console.log('Results saved to server:', data.filename);
+        } else {
+            console.error('Server save failed:', data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error submitting results to server:', error);
+    });
 }
 
 /**
